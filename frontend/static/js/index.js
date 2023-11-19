@@ -23,6 +23,7 @@ const navigateTo = (url) => {
 };
 
 const router = async () => {
+  console.log('router');
   const routes = [
     { path: '/', view: Dashboard },
     { path: '/posts', view: Posts },
@@ -46,6 +47,7 @@ const router = async () => {
       result: [location.pathname],
     };
   }
+  console.log('Matched Route:', match);
 
   const view = new match.route.view(getParams(match));
 
